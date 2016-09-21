@@ -48,11 +48,13 @@ export default class Nav extends Component {
 
     let icon = <Share className={`${CLASS_ROOT}__icon`} colorIndex={"dark-2"} />;
 
-    let navCta = <Anchor label={'Share'} icon={icon} reverse={true} onClick={this._onClick} />;
+    let navCta = (<Anchor label={'Share'} icon={icon} reverse={true} 
+      onClick={this._onClick} />);
 
     let layer = (this.state.layerActive) ? (
       <div className="share-layer">
-        <Layer onClose={this._onLayerClose} closer={true} flush={true} align={"center"}>
+        <Layer onClose={this._onLayerClose} closer={true} flush={true} 
+          align={"center"}>
           <div className="share">
             <Headline size={"large"} strong={true}>
               Thanks for sharing, we're glad you enjoyed it.
