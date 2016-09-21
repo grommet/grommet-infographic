@@ -1,0 +1,136 @@
+// (C) Copyright 2014-2015 Hewlett Packard Enterprise Development LP
+
+@import 'grommet/scss/hpe/hpe.defaults';
+@import 'infographics.defaults';
+@import 'grommet/scss/grommet-core/index';
+@import 'grommet/scss/hpe/objects.button-hpe';
+
+@import 'objects.start';
+@import 'objects.infographic-nav';
+@import 'objects.chart';
+@import 'objects.meter';
+@import 'objects.input';
+@import 'objects.layer';
+@import 'objects.infographic-map';
+@import 'layout';
+
+// With some screen sizes the overflow
+// has a white background.
+body,
+html {
+  background: nth($brand-neutral-colors, 1);
+}
+
+.dashboard {
+  // Make room for header.
+  padding-top: 110px;
+  min-height: none;
+
+  @include media-query(lap-and-up) {
+    min-height: 910px;
+    overflow: visible;
+    padding: 110px 48px 48px;
+  } 
+
+  .infographic-start {
+    padding-top: 0;
+  }
+
+  @media(max-width: 950px) and (min-width: 45em) {
+    min-height: auto;
+    max-height: none;
+    height: auto;
+  }
+}
+
+.infographic-stat {
+  @media screen and (max-width: 44.9375em) {
+    // Swap the stat and image's positions.
+    flex-direction: column-reverse;
+  }
+  
+  @include media-query(lap-and-up) {
+    flex-direction: row;
+  }
+
+  h1 {
+    font-size: 3.75rem;
+    margin-bottom: 0;
+    margin: 0;
+    padding: 0;
+    line-height: 3rem;
+
+    @include media-query(lap-and-up) {
+      font-size: 5rem;
+      line-height: 3.5rem;
+    }
+  }
+
+  span.unit {
+    font-size: 50%;
+  }
+
+  span.support {
+    font-size: 25%;
+  }
+
+  h3 {
+    line-height: 1.5rem;
+    font-weight: 400;
+
+    @include media-query(lap-and-up) {
+      line-height: 1.4rem;
+    }
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    padding: 0 0 24px;
+
+    @include media-query(lap-and-up) {
+      padding: 0 24px 0 0;
+    }
+  }
+}
+
+.grommet input[type=range] {
+  overflow: visible;
+}
+
+.grommetux-legend {
+  padding-top: 24px;
+
+  .grommetux-legend__item {
+    display: inline-block;
+  }
+
+  .grommetux-legend__item-label {
+    color: #fff;
+  }
+}
+
+.grommetux-chart {
+  margin-bottom: 16px;
+}
+
+.area-legend {
+  @media(min-width: 1645px) {
+    justify-content: center;
+  }
+
+  h1,
+  ol {
+    padding: 0;
+    margin: 0;
+  }
+
+  .area-legend__list {
+    flex-direction: row-reverse;
+    align-self: flex-start;
+
+    @media(min-width: 1540px) {
+      flex-direction: column;
+    }
+  }
+}

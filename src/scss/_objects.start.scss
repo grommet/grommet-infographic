@@ -1,0 +1,74 @@
+.infographic-start {
+	border-bottom: $border;
+	width: 100%;
+
+	a { 
+		font-size: 26px;
+		display: inline-block;
+	  color: $text-color; 
+	  transition: opacity 0.2s linear;
+	  text-decoration: none;
+	  padding-left: 0;
+	  margin: 5px 0 15px;
+		font-weight: 400;
+
+	  &:hover {
+	    color: $text-color; 
+	    opacity: 0.8;
+	  }
+
+	  span { vertical-align: middle; }
+
+	  .grommetux-control-icon {
+	    margin-right: 5px;
+
+	    path {
+	      stroke: $brand-color;
+	      stroke-width: 3px;
+	    }
+	  }
+	}
+
+	.grommetux-heading {
+		max-width: 950px;
+	}
+
+	.col__span-50 {
+		width: 50%;
+		height: auto;
+	}
+
+	.col__span-100 {
+		width: 100%;
+		height: auto;
+	}
+
+	&.col-row {
+		padding-bottom: 20px;
+	}
+
+	h1.infographic-title {
+		font-size: 2.75rem;
+		line-height: 2.5rem;
+
+		@include media-query(lap-and-up) {
+			font-size: 4rem;
+			line-height: 3.5rem;
+		}
+	}
+}
+
+#{$dark-background-context} {
+  .infographic-start a { 
+    color: $inverse-color; 
+    text-decoration: none;
+
+    &:hover {
+      color: $inverse-color; 
+    }
+
+    .grommetux-control-icon path {
+      stroke: $brand-color;
+    }
+  }
+}

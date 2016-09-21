@@ -1,0 +1,20 @@
+.infographic-map-container {
+  width: 100%;
+
+  .grommetux-world-map {
+    max-height: 277px;
+  }
+
+  @include media-query(lap-and-up) {
+    min-height: auto;
+  }
+}
+
+.infographic-map {
+	width: 100%;
+
+	@include media-query(lap-and-up) {
+		min-height: auto;
+    overflow-y: auto;
+	}
+}
