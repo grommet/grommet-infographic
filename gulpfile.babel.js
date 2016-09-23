@@ -91,46 +91,6 @@ fs.readdirSync('node_modules')
     nodeModules[mod] = 'commonjs ' + mod;
   });
 
-gulp.task('generate-server-routes', function() {
-  return gulp.src(path.join(__dirname, 'src/js/routes.js'))
-    .pipe(gulpWebpack({
-      target: 'node',
-      output: {
-        path: path.join(__dirname, 'server'),
-        filename: 'server-routes.js',
-        libraryTarget: 'commonjs2'
-      },
-      module: {
-        loaders: [
-          {
-            test: /\.js$/,
-            loader: 'babel-loader',
-            exclude: /(node_modules|bower_components)/
-          },
-          {
-            test: /develop(\/|\\).*\.htm$|design(\/|\\)[^\/]*\.htm$|design(\/|\\).*\/.*\.htm$/,
-            loader: 'babel-loader!imports?React=react,Router=react-router,Link=>Router.Link!html-jsx-loader',
-            exclude: /(node_modules|bower_components)/
-          }
-        ]
-      },
-      resolve: {
-        extensions: ['', '.js', '.json', '.htm', '.html', '.scss', '.md', '.svg'],
-        root: [
-          path.join(__dirname, './node_modules'),
-          path.join(__dirname, './node_modules/grommet/node_modules')
-        ]
-      },
-      externals: nodeModules,
-      plugins: [
-        new webpack.DefinePlugin({
-          NODE_ENV: "\"production\""
-        })
-      ]
-    }))
-    .pipe(gulp.dest(path.join(__dirname, 'server')));
-});
-
 gulp.task('release:createTmp', function(done) {
   del.sync(['./tmp']);
   mkdirp('./tmp', function(err) {

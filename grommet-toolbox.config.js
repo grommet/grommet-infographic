@@ -64,6 +64,5 @@ export default {
   devPreprocess: [
     'set-webpack-alias', 'dist-css', 'watch-css'
   ],
-  distPreprocess: ['set-webpack-alias', 'dist-css', 
-    'generate-server-routes']
+  distPreprocess: ['set-webpack-alias', 'dist-css']
 };
