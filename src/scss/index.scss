@@ -27,7 +27,6 @@ html {
   min-height: none;
 
   @include media-query(lap-and-up) {
-    min-height: 910px;
     overflow: visible;
     padding: 110px 48px 48px;
   } 

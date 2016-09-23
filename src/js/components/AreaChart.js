@@ -7,6 +7,7 @@ import Chart,
 import Heading from 'grommet/components/Heading';
 import Box from 'grommet/components/Box';
 import Legend from 'grommet/components/Legend';
+import Value from 'grommet/components/Value';
 
 import { areaSeries } from '../constants';
 
@@ -46,9 +47,7 @@ export default class AreaChart extends Component {
           direction="row" wrap={true} style={{width:'100%'}}>
           <Box className="area-legend__list" justify="center" 
             align="center" direction="column">
-            <Heading tag="h1" strong={true}>
-              {areaSeries.VALUES_2[this.state.index]}
-            </Heading>
+            <Value value={areaSeries.VALUES_2[this.state.index]} />
             <Legend series={[
               {
                 "label": "Developing Countries",
@@ -59,9 +58,7 @@ export default class AreaChart extends Component {
 
           <Box className="area-legend__list" justify="center" 
             align="center" direction="column">
-            <Heading tag="h1" strong={true}>
-              {areaSeries.VALUES[this.state.index]}
-            </Heading>
+            <Value value={areaSeries.VALUES[this.state.index]} />
             <Legend series={[
               {
                 "label": "Developed Countries",
