@@ -81,7 +81,7 @@
 }
 
 // Full screen desktop layer.
-@media screen and (min-width: 45em) {
+@include media-query(lap-and-up) {
   .grommet.grommetux-layer.grommetux-layer--align-center:not(.grometux-layer--hidden) .grommetux-layer__container {
       width: 100vw;
       max-width: 100vw;

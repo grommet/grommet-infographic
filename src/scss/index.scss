@@ -52,19 +52,6 @@ html {
     flex-direction: row;
   }
 
-  h1 {
-    font-size: 3.75rem;
-    margin-bottom: 0;
-    margin: 0;
-    padding: 0;
-    line-height: 3rem;
-
-    @include media-query(lap-and-up) {
-      font-size: 5rem;
-      line-height: 3.5rem;
-    }
-  }
-
   span.unit {
     font-size: 50%;
   }

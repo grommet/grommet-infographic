@@ -1,100 +1,24 @@
-nav.section-nav {
+.grommetux-header.section-nav {
 	position: fixed;
 	top: 0;
 	width: 100%;
-	color: nth($brand-accent-colors, 1);
 	z-index: 10;
-	transition: transform 0.3s ease-out;
 
-	.section-nav--active {
-		transform: translateY(0);
+	.logo-hpe {
+		width: 118px;
+		height: 50px;
+
+		img {
+			width: 100%;
+			height: auto;
+		}
 	}
+	
 
-	&:not(.section-nav--active) {
-		transform: translateY(calc(-100% + 4px));
-	}
-
-	.section-nav__container {
-		display: flex; 
-		flex-direction: row;
-
+	@include media-query(lap-and-up) {
 		.logo-hpe {
-			width: 60%;
-			padding: 15px;
-
-			img {
-				max-width: 129px;
-			}
-		}
-
-		.section-nav__icon {
-			margin-left: 13px;
-
-			&.more-arrow {
-				transform-origin: 50%;
-				transform: rotate(-45deg);
-			}
-		}
-
-		&.section-nav__container--started {
-			border-bottom: 1px solid #f0f0f0;
-		}
-
-		.section-nav__control {
-			display: flex;
-			justify-content: flex-end;
-			align-items: center;
-			width: 40%;
-			padding: 13px 20px;
-
-			a.grommetux-anchor {
-				font-weight: 400;
-				font-size: 1rem;
-				color: #333;
-				svg { stroke: #333; }
-				transition: color 0.3s ease-in-out;
-
-				.grommetux-control-icon-share {
-					max-width: 18px;
-				}
-
-				&:hover {
-					text-decoration: none;
-					color: #000;
-
-					svg {
-						stroke: #000;
-
-						&.grommetux-control-icon-share {
-							transform: none;
-						}
-					}
-				}
-			}
-		}
-
-		.section-nav__control-start {
-			font-weight: 600;
-			text-transform: uppercase;
-		}
-
-		.section-nav__control-next,
-		.section-nav__control-previous {
-			width: 25%;
-		}
-	}
-
-	@media(min-width: 500px) {
-		.section-nav__container {
-			.logo-hpe {
-				padding: 24px 48px;
-			}
-
-			.section-nav__control {
-				justify-content: flex-end;
-				align-items: center;
-				padding: 24px 48px;
-			}
+			width: 118px;
+			height: 50px;
 		}
 	}
 }

@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import HPELogo from '../components/HPELogo.js';
+import HPELogo from './HPELogo.js';
 import classnames from 'classnames';
 import Anchor from 'grommet/components/Anchor';
 import Layer from 'grommet/components/Layer';
 import Box from 'grommet/components/Box';
+import Header from 'grommet/components/Header';
 import Headline from 'grommet/components/Headline';
 import Share from 'grommet/components/icons/base/Share';
 import SocialShare from 'grommet/components/SocialShare';
@@ -13,14 +14,12 @@ const CLASS_ROOT = 'section-nav';
 export default class Nav extends Component {
   constructor() {
     super();
+    this.state = {
+      layerActive: false
+    };
 
     this._onClick = this._onClick.bind(this);
     this._onLayerClose = this._onLayerClose.bind(this);
-
-    this.state = {
-      active: true,
-      layerActive: false
-    };
   }
 
   _onClick() {
@@ -32,26 +31,14 @@ export default class Nav extends Component {
   }
 
   render() {
-    let classes = classnames(
-      CLASS_ROOT,
-      {
-        [`${CLASS_ROOT}--active`]: this.state.active
-      }
+    const classes = classnames(
+      CLASS_ROOT
     );
 
-    let containerClasses = classnames(
-      `${CLASS_ROOT}__container`,
-      {
-        [`${CLASS_ROOT}__container--started`]: this.state.started
-      }
-    );
+    const navCta = (<Anchor label={'Share'} icon={<Share />} reverse={true} 
+      onClick={this._onClick} primary={true} />);
 
-    let icon = <Share className={`${CLASS_ROOT}__icon`} colorIndex={"dark-2"} />;
-
-    let navCta = (<Anchor label={'Share'} icon={icon} reverse={true} 
-      onClick={this._onClick} />);
-
-    let layer = (this.state.layerActive) ? (
+    const layer = (this.state.layerActive) ? (
       <div className="share-layer">
         <Layer onClose={this._onLayerClose} closer={true} flush={true} 
           align={"center"}>
@@ -61,34 +48,37 @@ export default class Nav extends Component {
             </Headline>
             <div className="share__icons">
               <SocialShare type="email"
-              link="#"
-              title="Grommet Infographic"
-              text="HPE...." />
+              link="http://intelligent-venues.grommet.io/"
+              title="Hewlett Packard Enterprise - Intelligent Venues"
+              text="HPE is helping stadiums, theme parks and cultural 
+                institutions turn visitors into uber fans." />
               <SocialShare type="twitter"
-              link="#"
-              text="@HPE..." />
+              link="http://intelligent-venues.grommet.io/"
+              text="@HPE is helping stadiums, theme parks and cultural 
+                institutions turn visitors into uber fans." />
               <SocialShare type="facebook"
-              link="#" />
+              link="http://intelligent-venues.grommet.io/" />
               <SocialShare type="linkedin"
-              link="#"
-              title="Grommet Infographic"
-              text="HPE..." />
+              link="http://intelligent-venues.grommet.io/"
+              title="Hewlett Packard Enterprise - Intelligent Venues"
+              text="HPE is helping stadiums, theme parks and cultural 
+                institutions turn visitors into uber fans." />
             </div>
           </div>
         </Layer>
       </div>
-    ) : null;
+    ) : undefined;
 
     return (
-      <nav className={classes}>
-      	<Box className={containerClasses} colorIndex="neutral-1">
-          <HPELogo />
-          <div className={`${CLASS_ROOT}__control`}>
-            {navCta}
-          </div>
-        </Box>
+      <Header className={classes} direction="column" pad={{between:"none"}}
+        align="start">
         {layer}
-      </nav>
+        <Box full="horizontal" direction="row" align="center" justify="between"
+          responsive={false} colorIndex="neutral-1" pad="medium">
+          <HPELogo />
+          {navCta}
+        </Box>
+      </Header>
     );
   }
 };

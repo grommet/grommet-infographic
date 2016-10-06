@@ -3,10 +3,11 @@ import React, { Component } from 'react';
 import Responsive from 'grommet/utils/Responsive';
 
 import Box from 'grommet/components/Box';
-import Map from './Map';
+import WorldMap from './Map';
 import CircleMeter from './CircleMeter';
 import AreaChart from './AreaChart';
 import Heading from 'grommet/components/Heading';
+import Anchor from 'grommet/components/Anchor';
 import LinkNext from 'grommet/components/icons/base/LinkNext';
 
 export default class HomePage extends Component {
@@ -50,14 +51,13 @@ export default class HomePage extends Component {
             </Heading>         
             <Box direction="column">
               <Heading tag="h3">
-                Access to the internet has increased at an unprecedented rate over the past
-                10 years. Creating today’s idea economy, where the speed of businesses 
-                is faster and more agile than ever.
+                Access to the internet has increased at an unprecedented rate 
+                over the past 10 years. Creating today’s idea economy, where 
+                the speed of businesses is faster and more agile than ever.
               </Heading>
               <Box>
-                <a href="#" className="cta">
-                  <span><LinkNext /></span>Learn More
-                </a>
+                <Anchor href="#" primary={true} label="Learn More" 
+                  icon={<LinkNext />} />
               </Box>
             </Box>
           </Box>
@@ -92,7 +92,7 @@ export default class HomePage extends Component {
           </Box>
           <Box className="map-box col__span-50" justify="start" 
             align="center">
-            <Map />
+            <WorldMap />
           </Box>
         </Box>
       </Box>
