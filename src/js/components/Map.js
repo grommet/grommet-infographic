@@ -15,7 +15,7 @@ export default class Map extends Component {
           Individuals Using the Internet per 100 Users
         </Heading>
         <Box className="infographic-map">
-          <WorldMap series={mapSeries} legend={true} units="per 100" />
+          <WorldMap series={mapSeries} />
         </Box>
         <Box align="center" justify="center">
           <Legend series={[
