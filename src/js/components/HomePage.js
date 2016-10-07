@@ -44,7 +44,7 @@ export default class HomePage extends Component {
     
     return (
       <Box className="dashboard" justify="center" align="center" full={true}
-        pad="large" colorIndex="grey-2">
+        pad="large" colorIndex="light-1">
         <Box className="infographic-start" direction="column">
           <Box justify="center" align="start">
             <Box direction="row">

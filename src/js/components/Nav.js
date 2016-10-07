@@ -74,7 +74,7 @@ export default class Nav extends Component {
         align="start">
         {layer}
         <Box full="horizontal" direction="row" align="center" justify="between"
-          responsive={false} colorIndex="grey-2" pad="medium">
+          responsive={false} colorIndex="light-1" pad="medium">
           <HPELogo />
           {navCta}
         </Box>
