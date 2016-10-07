@@ -52,7 +52,7 @@ export default {
       ]
     }
   },
-  devServerPort: 8003,
+  devServerPort: 8004,
   //devServerHost: "10.0.0.1",
   scsslint: true,
   hot: true,

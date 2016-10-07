@@ -24,14 +24,14 @@ export const mapSeries = [
     continent: "Africa",
     label: "Africa",
     value: 10,
-    colorIndex: "graph-1",
+    colorIndex: "neutral-3",
     onClick: () => {}
   },
   {
     continent: "Asia",
     label: "Asia",
     value: 15,
-    colorIndex: "graph-2",
+    colorIndex: "neutral-2",
     onClick: () => {}
   },
   {
