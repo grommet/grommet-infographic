@@ -3,7 +3,7 @@ export const mapSeries = [
     continent: "NorthAmerica",
     label: "North America",
     value: 40,
-    colorIndex: "accent-4",
+    colorIndex: "brand",
     onClick: () => {}
   },
   {
@@ -17,21 +17,21 @@ export const mapSeries = [
     continent: "Europe",
     label: "Europe",
     value: 20,
-    colorIndex: "accent-4",
+    colorIndex: "brand",
     onClick: () => {}
   },
   {
     continent: "Africa",
     label: "Africa",
     value: 10,
-    colorIndex: "grey-5",
+    colorIndex: "graph-1",
     onClick: () => {}
   },
   {
     continent: "Asia",
     label: "Asia",
     value: 15,
-    colorIndex: "grey-3",
+    colorIndex: "graph-2",
     onClick: () => {}
   },
   {
@@ -47,18 +47,18 @@ export const meterSeries = [
   {
     year: '2005',
     max: 6.5,
-    series: [{"label": "People", "value": 5.45, "colorIndex": "accent-4"},
-    {"label": "People", "value": 1.05, "colorIndex": "accent-1"}]
+    series: [{"label": "People", "value": 5.4, "colorIndex": "brand"},
+    {"label": "People", "value": 1.1, "colorIndex": "accent-1"}]
   },{
     year: '2010',
     max: 6.9,
-    series: [{"label": "People", "value": 4.83, "colorIndex": "accent-4"},
-    {"label": "People", "value": 2.07, "colorIndex": "accent-1"}]
+    series: [{"label": "People", "value": 4.8, "colorIndex": "brand"},
+    {"label": "People", "value": 2.1, "colorIndex": "accent-1"}]
   },{
     year: '2014',
     max: 7.2,
-    series: [{"label": "People", "value": 4.32, "colorIndex": "accent-4"},
-    {"label": "People", "value": 2.88, "colorIndex": "accent-1"}]
+    series: [{"label": "People", "value": 4.3, "colorIndex": "brand"},
+    {"label": "People", "value": 2.9, "colorIndex": "accent-1"}]
   }
 ];
 

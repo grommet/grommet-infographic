@@ -73,11 +73,11 @@ export default class CircleMeter extends Component {
         <Legend series={[
           {
             "label": "Not using the Internet",
-            "colorIndex": "accent-3"
+            "colorIndex": "accent-1"
           },
           {
             "label": "Using the Internet",
-            "colorIndex": "accent-4"
+            "colorIndex": "brand"
           }
         ]} units="B" />
       </Box>
