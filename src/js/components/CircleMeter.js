@@ -24,7 +24,9 @@ export default class CircleMeter extends Component {
 
   _onActive(index) {
     if (index !== undefined)
-      this.setState({ statValue: meterSeries[this.state.rangeValue].series[index].value });
+      this.setState({ 
+        statValue: meterSeries[this.state.rangeValue].series[index].value 
+      });
     else this.setState({ statValue: meterSeries[this.state.rangeValue].max });
   }
 
@@ -46,10 +48,12 @@ export default class CircleMeter extends Component {
     );
 
     return (
-      <Box align="center" style={{width:'100%'}}>
-        <Heading className="box-title" tag="h4" strong={true}>
-          World population using the Internet
-        </Heading>
+      <Box align="center" full="horizontal">
+        <Box full="horizontal">
+          <Heading className="box-title" tag="h4" strong={true}>
+            World population using the Internet
+          </Heading>
+        </Box>
         <Heading tag="h5">
           {meterSeries[this.state.rangeValue].year}
         </Heading>

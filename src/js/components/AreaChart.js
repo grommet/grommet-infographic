@@ -20,8 +20,8 @@ export default class AreaChart extends Component {
 
   render() {
     return (
-      <Box align="center" style={{width:'100%'}}>
-        <Heading className="box-title" tag="h4" strong={true}>
+      <Box full="horizontal">
+        <Heading tag="h4" strong={true}>
           Growth in Internet Users
         </Heading>
         <Chart vertical={true} full={true}>
@@ -34,17 +34,18 @@ export default class AreaChart extends Component {
             <HotSpots count={areaSeries.VALUES.length}
               activeIndex={this.state.index}
               onActive={(index) => this.setState({
-                index: undefined === index ? (areaSeries.VALUES.length - 1) : index
+                index: undefined === index 
+                  ? (areaSeries.VALUES.length - 1) : index
               })} />
           </Layers>
         </Chart>
-        <Box>
+        <Box align="center">
           <Heading tag="h5" strong={true}>
             Per 100 Users in {this.state.index + 2005}
           </Heading>
         </Box>
-        <Box align="center" justify="start" className="area-legend" 
-          direction="row" wrap={true} style={{width:'100%'}}>
+        <Box justify="start" className="area-legend" 
+          direction="row" wrap={true}>
           <Box className="area-legend__list" justify="center" 
             align="center" direction="column">
             <Value value={areaSeries.VALUES_2[this.state.index]} />

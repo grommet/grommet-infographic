@@ -1,113 +1,55 @@
-.grommetux-box {
-  //overflow: auto;
-}
-
-.col-row {
-  width: 100%;
-  height: auto;
-  min-height: auto;
-  padding-top: 24px;
-  overflow: visible;
-
-  @include media-query(lap-and-up) {
-    height: 50%;
-    //min-height: 430px;
-  }
-}
-
-.col-row .col__span-50,
-.col-row .col__span-25 {
-  border-right: none;
-  border-bottom: $border;
-  padding: 20px;
-
-  @include media-query(lap-and-up) {
-    border-bottom: none;
-    border-right: $border;
-    padding: 20px 20px 0;
-  }
-}
-
-.start-box {
-  border-right: none;
-  border-bottom: $border;
-  padding: 0 20px 20px;
-
-  @include media-query(lap-and-up) {
-    border-bottom: none;
-    border-right: $border;
-    padding: 20px;
-  }
-}
-
-.col-row div:last-child {
-  border: none;
-}
-
-.col__span-12 {
-  width: 100%;
-  min-width: 100%;
-  height: auto;
-  min-height: none;
-
-  @include media-query(lap-and-up) {
-    height: 50%;
-    min-height: 50%;
-  }
-}
-
 .col__span-50 {
   width: 100%;
   min-width: 100%;
-  height: auto;
-  min-height: none;
 
   @include media-query(lap-and-up) {
     width: 50%;
     min-width: 50%;
-    height: 100%;
-    min-height: 100%;
-  }
-}
-
-// Layout struggles with laptop screens so we
-// break to mobile sooner.
-.col-row__bottom {
-  min-height: 50%;
-  height: auto;
-  
-  @media(max-width: 950px) and (min-width: 45em) {
-    flex-direction: column;
-
-    .col__span-25,
-    .col__span-50 {
-      width: 100%;
-      border-right: none;
-      border-bottom: $border;
-      padding-bottom: 24px;
-    }
-
-    .area-box {
-      .area-legend__list {
-        display: block;
-      }
-    }
   }
 }
 
 .col__span-25 {
   width: 100%;
   min-width: 100%;
-  height: auto;
-  min-height: none;
 
-  @include media-query(lap-and-up) {
+  @media(min-width: 950px) {
     width: 25%;
     min-width: 25%;
-    min-height: 100%;
   }
 }
 
-.box-title {
-  align-self: flex-start;
+.stacked-row {
+  width: 100%;
+
+  & > div {
+    border-bottom: none;
+    border-right: $border;
+
+    &:last-child {
+      border: none;
+    }
+  }
+
+  // Break to mobile earlier due to layout complexity.
+  @media(max-width: 950px) {
+    flex-direction: column;
+
+    & > div {
+      flex-basis: 100%;
+      width: 100%;
+      border-right: none;
+      border-bottom: $border;
+      align-items: center;
+
+      &:not(:last-child) {
+        padding-bottom: 24px;
+        margin-bottom: 24px;
+      }
+
+      .area-legend {
+        justify-content: center;
+        & > div { padding: 0 16px;}
+      }
+    } 
+  }
 }

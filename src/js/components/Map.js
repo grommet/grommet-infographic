@@ -17,7 +17,7 @@ export default class Map extends Component {
         <Box className="infographic-map">
           <WorldMap series={mapSeries} />
         </Box>
-        <Box align="center" justify="center">
+        <Box align="center" justify="center" pad={{vertical:"medium"}}>
           <Legend series={[
             {
               "label": "0",

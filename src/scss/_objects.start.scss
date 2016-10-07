@@ -19,14 +19,4 @@
 	&.col-row {
 		padding-bottom: 20px;
 	}
-
-	h1.infographic-title {
-		font-size: 2.75rem;
-		line-height: 2.5rem;
-
-		@include media-query(lap-and-up) {
-			font-size: 4rem;
-			line-height: 3.5rem;
-		}
-	}
 }

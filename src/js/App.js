@@ -3,14 +3,12 @@
 import React from 'react';
 import GrommetApp from 'grommet/components/App';
 
-import Nav from './components/Nav';
 import HomePage from './components/HomePage';
 
 class App extends React.Component {
   render() {
     return (
       <GrommetApp centered={false}>
-      	<Nav />
         <HomePage />
       </GrommetApp>
     );

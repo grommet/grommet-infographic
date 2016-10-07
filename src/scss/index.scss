@@ -6,10 +6,7 @@
 @import 'grommet/scss/hpe/objects.button-hpe';
 
 @import 'objects.start';
-@import 'objects.infographic-nav';
 @import 'objects.chart';
-@import 'objects.meter';
-@import 'objects.input';
 @import 'objects.layer';
 @import 'objects.infographic-map';
 @import 'layout';
@@ -19,27 +16,6 @@
 body,
 html {
   background: nth($brand-neutral-colors, 1);
-}
-
-.dashboard {
-  // Make room for header.
-  padding-top: 110px;
-  min-height: none;
-
-  @include media-query(lap-and-up) {
-    overflow: visible;
-    padding: 110px 48px 48px;
-  } 
-
-  .infographic-start {
-    padding-top: 0;
-  }
-
-  @media(max-width: 950px) and (min-width: 45em) {
-    min-height: auto;
-    max-height: none;
-    height: auto;
-  }
 }
 
 .infographic-stat {
@@ -57,7 +33,7 @@ html {
   }
 
   span.support {
-    font-size: 25%;
+    font-size: 50%;
   }
 
   h3 {
@@ -80,27 +56,15 @@ html {
   }
 }
 
-.grommet input[type=range] {
-  overflow: visible;
-}
-
 .grommetux-legend {
-  padding-top: 24px;
-
   .grommetux-legend__item {
     display: inline-block;
   }
-
-  .grommetux-legend__item-label {
-    color: #fff;
-  }
-}
-
-.grommetux-chart {
-  margin-bottom: 16px;
 }
 
 .area-legend {
+  width: 100%;
+  
   @media(min-width: 1645px) {
     justify-content: center;
   }
