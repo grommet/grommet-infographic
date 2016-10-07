@@ -65,7 +65,7 @@ export default class HomePage extends Component {
                 over the past 10 years. Creating today’s idea economy, where 
                 the speed of businesses is faster and more agile than ever.
               </Heading>
-              <Box direction="row" justify="between">
+              <Box direction="row" justify="start" responsive={false}>
                 <Button href="#" label="Learn More" plain={true}
                   icon={<LinkNext />} />
               </Box>
