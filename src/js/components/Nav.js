@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
+import HPELogo from './HPELogo.js';
+import classnames from 'classnames';
 import Button from 'grommet/components/Button';
 import Layer from 'grommet/components/Layer';
 import Box from 'grommet/components/Box';
+import Header from 'grommet/components/Header';
 import Headline from 'grommet/components/Headline';
-import ShareIcon from 'grommet/components/icons/base/Share';
+import Share from 'grommet/components/icons/base/Share';
 import SocialShare from 'grommet/components/SocialShare';
 
-export default class Share extends Component {
+const CLASS_ROOT = 'section-nav';
+
+export default class Nav extends Component {
   constructor() {
     super();
     this.state = {
@@ -26,7 +31,11 @@ export default class Share extends Component {
   }
 
   render() {
-    const navCta = (<Button label={'Share'} plain={true} icon={<ShareIcon />} 
+    const classes = classnames(
+      CLASS_ROOT
+    );
+
+    const navCta = (<Button label={'Share'} icon={<Share />} plain={true} 
       onClick={this._onClick} />);
 
     const layer = (this.state.layerActive) ? (
@@ -61,10 +70,15 @@ export default class Share extends Component {
     ) : undefined;
 
     return (
-      <Box direction="row" justify="end" responsive={false} pad="none">
-        {navCta}
+      <Header className={classes} direction="column" pad={{between:"none"}}
+        align="start">
         {layer}
-      </Box>
+        <Box full="horizontal" direction="row" align="center" justify="between"
+          responsive={false} colorIndex="grey-2" pad="medium">
+          <HPELogo />
+          {navCta}
+        </Box>
+      </Header>
     );
   }
 };

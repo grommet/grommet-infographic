@@ -10,9 +10,6 @@ import Heading from 'grommet/components/Heading';
 import Headline from 'grommet/components/Headline';
 import Button from 'grommet/components/Button';
 import LinkNext from 'grommet/components/icons/base/LinkNext';
-
-import Share from './Share';
-
 import '../../scss/index.scss';
 
 export default class HomePage extends Component {
@@ -46,14 +43,10 @@ export default class HomePage extends Component {
       : <img src="../img/people-mobile.svg" />;
     
     return (
-      <Box className="dashboard" justify="center" align="center" 
-        pad="large" colorIndex="neutral-1" style={{paddingTop: 0}}>
-      
+      <Box className="dashboard" justify="center" align="center" full={true}
+        pad="large" colorIndex="grey-2">
         <Box className="infographic-start" direction="column">
           <Box justify="center" align="start">
-            <Box justify="end" full="horizontal">
-              <Share />
-            </Box>
             <Box direction="row">
               <Headline size="medium" strong={true}>
                 Worldwide Internet Usage
@@ -65,7 +58,7 @@ export default class HomePage extends Component {
                 over the past 10 years. Creating today’s idea economy, where 
                 the speed of businesses is faster and more agile than ever.
               </Heading>
-              <Box direction="row" justify="between">
+              <Box align="start" direction="row">
                 <Button href="#" label="Learn More" plain={true}
                   icon={<LinkNext />} />
               </Box>

@@ -77,7 +77,7 @@ export default class CircleMeter extends Component {
           },
           {
             "label": "Using the Internet",
-            "colorIndex": "accent-1"
+            "colorIndex": "accent-4"
           }
         ]} units="B" />
       </Box>

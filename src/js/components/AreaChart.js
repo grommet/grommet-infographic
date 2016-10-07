@@ -27,9 +27,9 @@ export default class AreaChart extends Component {
         <Chart vertical={true} full={true}>
           <Base height="small" width="full" />
           <Layers>
-            <Area values={areaSeries.VALUES} colorIndex="accent-1" 
+            <Area values={areaSeries.VALUES} colorIndex="accent-4" 
               activeIndex={this.state.index} />
-            <Area values={areaSeries.VALUES_2} colorIndex="accent-3" 
+            <Area values={areaSeries.VALUES_2} colorIndex="accent-1" 
               activeIndex={this.state.index} />
             <HotSpots count={areaSeries.VALUES.length}
               activeIndex={this.state.index}
@@ -52,7 +52,7 @@ export default class AreaChart extends Component {
             <Legend series={[
               {
                 "label": "Developing Countries",
-                "colorIndex": "accent-3"
+                "colorIndex": "accent-1"
               }
             ]} />
           </Box>
@@ -63,7 +63,7 @@ export default class AreaChart extends Component {
             <Legend series={[
               {
                 "label": "Developed Countries",
-                "colorIndex": "accent-1"
+                "colorIndex": "accent-4"
               }
             ]} />
           </Box>

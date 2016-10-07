@@ -1,12 +1,10 @@
 // (C) Copyright 2014-2015 Hewlett Packard Enterprise Development LP
 
-@import 'grommet/scss/hpe/hpe.defaults';
 @import 'infographics.defaults';
 @import 'grommet/scss/grommet-core/index';
 @import 'grommet/scss/hpe/objects.button-hpe';
 
 @import 'objects.start';
-@import 'objects.chart';
 @import 'objects.layer';
 @import 'objects.infographic-map';
 @import 'layout';
@@ -15,7 +13,12 @@
 // has a white background.
 body,
 html {
-  background: nth($brand-neutral-colors, 1);
+  background: nth($brand-grey-colors, 2);
+}
+
+.dashboard {
+  // Room for header.
+  padding-top: 98px;
 }
 
 .infographic-stat {
@@ -52,6 +55,31 @@ html {
 
     @include media-query(lap-and-up) {
       padding: 0 24px 0 0;
+    }
+  }
+}
+
+.grommetux-header.section-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+
+  .logo-hpe {
+    width: 118px;
+    height: 50px;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  
+
+  @include media-query(lap-and-up) {
+    .logo-hpe {
+      width: 118px;
+      height: 50px;
     }
   }
 }

@@ -21,19 +21,19 @@ export default class Map extends Component {
           <Legend series={[
             {
               "label": "0",
-              "colorIndex": "graph-4"
+              "colorIndex": "grey-5"
             },
             {
               "label": "1-25",
-              "colorIndex": "graph-3"
+              "colorIndex": "grey-4"
             },
             {
               "label": "26-50",
-              "colorIndex": "accent-3"
+              "colorIndex": "accent-1"
             },
             {
               "label": "50+",
-              "colorIndex": "accent-1"
+              "colorIndex": "accent-4"
             }
           ]} />
         </Box>
