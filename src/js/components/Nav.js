@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import HPELogo from './HPELogo.js';
+import Logo from './Logo.js';
 import classnames from 'classnames';
 import Button from 'grommet/components/Button';
 import Layer from 'grommet/components/Layer';
@@ -75,7 +75,7 @@ export default class Nav extends Component {
         {layer}
         <Box full="horizontal" direction="row" align="center" justify="between"
           responsive={false} colorIndex="light-1" pad="medium">
-          <HPELogo />
+          <Logo />
           {navCta}
         </Box>
       </Header>
