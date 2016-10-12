@@ -1,11 +1,11 @@
 import React from 'react';
-import GrommetLogo from 'grommet/components/icons/base/BrandGrommetOutline';
+import BrandLogo from 'grommet/components/icons/base/PlatformAruba';
 
 export default function Logo (props) {
   return (
     <div className="logo-hpe">
     	<a href="#">
-        <GrommetLogo size="large" colorIndex="brand" />
+        <BrandLogo size="large" colorIndex="brand" />
       </a>
     </div>
   );
