@@ -7,7 +7,7 @@
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/karatechops/grommet-data-dashboard.git"
+    "url": "https://github.com/grommet/grommet-data-dashboard.git"
   },
   "dependencies": {
     "body-parser": "^1.15.2",
@@ -17,7 +17,7 @@
     "ejs": "^2.4.1",
     "enhanced-require": "^0.4.2",
     "express": "^4.10.6",
-    "grommet": "https://github.com/grommet/grommet/tarball/stable",
+    "grommet": "^1.0.1",
     "highlight.js": "^9.3.0",
     "history": "^1.17.0",
     "json-stringify-pretty-compact": "^1.0.1",
