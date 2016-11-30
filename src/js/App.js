@@ -2,8 +2,8 @@
 
 import React from 'react';
 import GrommetApp from 'grommet/components/App';
-
 import HomePage from './components/HomePage';
+import '../scss/index.scss';
 
 class App extends React.Component {
   render() {
