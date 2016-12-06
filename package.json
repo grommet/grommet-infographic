@@ -1,13 +1,13 @@
 {
-  "name": "grommet-data-dashboard",
+  "name": "grommet-infographic",
   "version": "0.0.1",
   "main": "src/index.js",
-  "description": "Grommet Data Dashboard Infographic Template.",
+  "description": "Grommet Infographic Template.",
   "homepage": "http://grommet.io",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/grommet/grommet-data-dashboard.git"
+    "url": "https://github.com/grommet/grommet-infographic.git"
   },
   "dependencies": {
     "body-parser": "^1.15.2",
