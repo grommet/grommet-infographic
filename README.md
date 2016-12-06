@@ -1,4 +1,4 @@
-# Grommet Data Dashboard Infographic Template
+# Grommet Infographic Template
 
 This is the source code for a Grommet based universal single page. To run the website execute the following:
 
