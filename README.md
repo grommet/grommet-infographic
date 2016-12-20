@@ -1,5 +1,7 @@
 # Grommet Infographic Template
 
+#### [Demo](https://grommet-infographic-hpinc.herokuapp.com/)
+
 This is the source code for a Grommet based universal single page. To run the website execute the following:
 
   1. Install website NPM modules:
